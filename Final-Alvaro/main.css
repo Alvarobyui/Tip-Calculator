@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+/*Colores:
+
+- Cyan fuerte: hsl(172, 67%, 45%)
+
+- Cyan muy oscuro: hsl(183, 100%, 15%)
+- Cyan grisaseo oscuro: hsl(186, 14%, 43%)
+- Cyan grisaseo: hsl(184, 14%, 56%)
+- Cyan grisaseo claro: hsl(185, 41%, 84%)
+- Cyan grisaseo muy claro: hsl(189, 41%, 97%)
+- Blanco: hsl(0, 0%, 100%)
+
+*/
+
+h1, h2, p, input, button, label {
+  font-family: 'Space Mono', monospace;
+}
+
+h2, p {
+  color:hsl(189, 41%, 97%);
+}
+* {
+  box-sizing: border-box;
+}
+/*Center and align*/
+html,
+body {
+  height: 100%;
+}
+
+body {
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(185, 41%, 84%);
+}
+
+
+
+.splitter-container {
+  /* height: 100vmin; */
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  gap: 1rem;
+  background-color: white;
+  padding: 3%;
+}
+
+
+/*Lado izquierdo*/
+
+.left-box {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px 0 8px;
+  width: 40%;
+  height: 100%;
+  padding: 30px 0;
+}
+
+label {
+  font-size: 10px;
+  color: dimgray;
+}
+.num-people-title {
+  display: flex;
+  align-items: center;
+  gap: 20%;
+  margin-top: 10px;
+  margin-bottom: -5px;
+}
+
+.tips-container {
+  margin-top: 15px;
+}
+
+input {
+  background-color: hsl(189, 41%, 97%);
+  border-radius: 5px;
+  border: none;
+  color: hsl(186, 69%, 20%);
+}
+/*Seccion de botones de porcentaje*/
+.percentage-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.percentage-container > input {
+  width: 10vmin;
+  border: 1px solid hsl(186, 69%, 20%);
+}
+.percentage-container > input:hover {
+  border: 1px solid hsl(172, 67%, 45%);
+  transition: all 0.3s ease-in;
+}
+.percentage-container > button {
+  background-color: hsl(186, 69%, 20%);
+  color: white;
+  border: none;
+}
+.percentage-container > button:hover {
+  background-color: hsl(178, 38%, 62%);
+  transition: all 0.3s ease-in;
+}
+
+.percentage-container > * {
+  width: 10vmin;
+  height: 4vmin;
+  border-radius: 5px;
+}
+
+
+/*Para el boton seleccionado*/
+.percentage-container > .active {
+  background-color: hsl(172, 67%, 45%);
+}
+
+/*Lado derecho*/
+
+.dollar-icon-output > img{
+  height: 150%;
+  width: 150%;
+  left: -90px;
+  top: 0;
+  position: relative;
+}
+.total-output, .tip-output {
+  position: relative;
+}
+
+#total-result, #tip-result {
+  color: hsl(172, 67%, 45%);
+  font-size: 200%;
+  position: absolute;
+  top: -37px;
+  left: -70px;
+}
+
+
+
+
+.right-box {
+  display: flex;
+  width: 50%;
+}
+.colored-back-box {
+  background-color: hsl(186, 69%, 20%);
+  border-radius: 6%;
+  padding: 10% 15% 10% 10%;
+  margin-left: 0;
+  width: 100%;
+}
+
+.total-box, .tip-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+h2 {
+  font-size: 12px;
+}
+p {
+  font-size: 10px;
+  color: darkgray;
+}
+
+.colored-back-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#reset-btn {
+  height: 20%;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(186, 69%, 20%);
+  border-radius: 5px;
+  border: none;
+}
+#reset-btn:hover {
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(186, 69%, 20%);
+  transition: all 0.5s ease;
+
+}
+
+ 
+
+/*Cajas de inputs*/
+
+.num-people-box, .bill-input-box {
+  position: relative;
+}
+
+.num-people-box > div, .bill-input-box > div {
+  position: absolute;
+  top: 4px;
+  left: 5px;
+}
+.num-people-box > input, .bill-input-box > input {
+  text-align: right;
+  width: 100%;
+ 
+}
+
+
