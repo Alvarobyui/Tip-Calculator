@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Tip calculator app</title>
+    <link rel="stylesheet" href="main.css"> 
+    <script src="tip-calculator.js" defer></script>
+  </head>
+  <body>
+    <div class="splitter-container">
+      <h1 id="splitter">SPLI <br> TTER</h1>
+      <div class="container">
+        <div class="left-box">
+          <div class="input-container">
+            <label>BILL</label>
+            <div class="bill-input-box">
+              <div class="dollar-icon">
+                <img src="images/icon-dollar.svg" alt="icon-dollar">
+              </div>
+              <input id="amount-input" inputmode="numeric" type="text" pattern="[0-9]+" placeholder="0" value="">  
+            </div>
+          </div>
+          <div class="tips-container">
+            <label>Selected Tip %</label>
+            <div class="percentage-container">
+              <button id="btn-5%" class="little-box" value="0.05">5%</button>
+              <button id="btn-10%" class="little-box" value="0.1">10%</button>
+              <button id="btn-15%" class="little-box" value="0.15">15%</button>
+              <button id="btn-25%" class="little-box" value="0.25">25%</button>
+              <button id="btn-50%" class="little-box" value="0.5">50%</button>
+              <input id="custom-input" type="text" inputmode="numeric" pattern="[0-9]+" name="custom" placeholder="Custom">
+            </div>
+          </div>
+          <div class="people-container">
+            <div class="num-people-title">
+              <label>Number of People</label>
+              <p class="animated-alert" id="animated-alert" style="visibility: hidden;">Can't be zero</p>
+            </div>
+            <div class="num-people-box">
+              <div class="person-icon">
+                <img src="images/icon-person.svg" alt="">
+              </div>
+              <input id="people-input" inputmode="numeric" type="text" pattern="[0-9]+" placeholder="">
+            </div>
+          </div>
+        </div>
+        <div class="right-box">
+          <div class="colored-back-box">
+            <div class="output-box">
+              <div class="tip-box">
+                <div class="tip-title">
+                  <h2 class="title">Tip Amount</h2>
+                  <p>/ person</p>
+                </div>
+                <div class="tip-output">
+                  <div class="dollar-icon-output">
+                    <img src="images/icon-dollar.svg" alt="dollar-icon">
+                  </div>
+                  <h3 id="tip-result">0.00</h3>
+                </div>
+              </div>
+              <div class="total-box">
+                <div class="total-title">
+                  <h2 class="title">Total</h2>
+                  <p>/ person</p>
+                </div>
+                <div class="total-output">
+                  <div class="dollar-icon-output">
+                    <img src="images/icon-dollar.svg" alt="dollar-icon">
+                  </div>
+                  <h3 id="total-result">0.00</h3>
+                </div>
+              </div>
+            </div>  
+            <button id="reset-btn">
+              Reset
+            </button>
+          </div>  
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
